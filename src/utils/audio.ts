@@ -51,6 +51,11 @@ function playBeep(
     try {
       oscillator.disconnect();
       gainNode.disconnect();
+      const isLinux = navigator.userAgent.toLowerCase().includes("linux");
+      if (isLinux && audioCtx) {
+        audioCtx.close();
+        audioCtx = null;
+      }
     } catch {
       // Ignore errors if context was already closed
     }
