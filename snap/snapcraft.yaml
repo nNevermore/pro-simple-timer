@@ -13,6 +13,7 @@ apps:
     command: usr/bin/pro-simple-timer
     desktop: usr/share/applications/pro-simple-timer.desktop
     extensions: [gnome]
+    plugs: [audio-playback]
 
 parts:
   build-app:
