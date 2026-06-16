@@ -28,6 +28,6 @@ src-tauri/target/
 src-tauri/gen/schemas/
 
 # Project packaging and MSIX outputs
-staging/
+staging/*.exe
 *.msix
 *.pfx
