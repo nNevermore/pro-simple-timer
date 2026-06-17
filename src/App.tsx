@@ -279,25 +279,7 @@ function App() {
   return (
     <div
       className={`app-container ${bgClass} ${isMini ? "mini-mode" : ""}`}
-      onMouseDown={(e: any) => {
-        if (
-          e.target.closest("button") ||
-          e.target.closest(".icon-btn") ||
-          e.target.closest(".config-panel") ||
-          e.target.closest(".sound-select") ||
-          e.target.closest(".volume-slider")
-        ) {
-          return;
-        }
-
-        if ((window as any).__TAURI_INTERNALS__ && window.innerWidth > 768) {
-          try {
-            getCurrentWindow().startDragging();
-          } catch (error) {
-            console.warn("Drag error", error);
-          }
-        }
-      }}
+      data-tauri-drag-region
     >
       <Sidebar
         configOpen={configOpen}
