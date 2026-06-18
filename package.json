@@ -1,6 +1,6 @@
 {
   "name": "pro-simple-timer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "A modern, customizable desktop interval timer built with Tauri, React, and TypeScript.",
   "keywords": [
@@ -25,7 +25,7 @@
     "check:deps": "knip",
     "check": "ultracite check",
     "fix": "ultracite fix",
-    "check-all": "npm run fix && npm run lint:oxlint && npm run check:types && npm run check:deps",
+    "check-all": "npm run fix && npm run check && npm run lint:oxlint && npm run check:types && npm run check:deps",
     "publish-git": "npm run check-all && node bump-version.js && git add . && git commit -m \"chore: bump version\" && git push"
   },
   "dependencies": {
